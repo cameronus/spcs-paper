@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{indentfirst}
+\usepackage{siunitx}
+\sisetup{group-separator = {,}}
+\DeclareSIUnit \parsec {pc}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\setlength{\belowcaptionskip}{-10pt}
+\setlength{\abovedisplayskip}{1pt}
+\setlength{\belowdisplayskip}{1pt}
+\linespread{1.2}
+\title{Interstellar Environmental Obstacles and Engineering Challenges for Relativistic Laser-propelled Spacecraft}
+\date{July 13, 2017}
+\author{Cameron Jones}
+
+\begin{document}
+
+\maketitle{}
+
+\section{Introduction}
+With present-day chemical propulsion technology, humanity's ability to explore the universe is severely limited. A probe travelling at relativistic speeds would be necessary to collect data from the Alpha Centauri system within a single human lifetime. Breakthrough Starshot, a mission conceptualized by Stephen Hawking and Yuri Milner, proposes the use of lasers to propel gram-scale spacecraft with lightsails to roughly one-fifth the speed of light.\footnote{At this velocity, it would take about 30 years to receive data from Proxima b \cite{starshot}.} To achieve this goal, the spacecrafts must be able to withstand gas bombardment and dust collisions with particles in the interstellar medium at high velocities. Not only do the interstellar particles pose a threat during the transit, but we do not have information about the interplanetary environment around Proxima b, the mission's target \cite[p.~1]{hoang2016}. The lightsail poses unique challenges to maintain stability during propulsion and to keep the sail from being vaporized by the ground-based laser array.\footnote{The sail's reflectivity would need to be near perfect to prevent vaporization.} In addition, designing and constructing a gram-scale spacecraft with communication, power, and data capture capabilities presents an array of challenges for engineers to solve. Through analyzing the environmental obstacles and engineering challenges, it is possible to further understand what technological developments are necessary to achieve relativistic velocities with these spacecraft and explore the universe \cite{starshot}.
+
+\section{Environmental obstacles}
+\subsection{Relativistic collisions}
+During the spacecraft's journey through the ISM\footnote{Interstellar medium}, it will collide with many gas and dust particles, potentially causing damage to its sensitive electronic components. According to a research paper by Dr.~Hoang et al., most damage inflicted upon an object travelling through the ISM at 20\% the speed of light would be caused by Coulomb explosions and explosive evaporation \cite[p.~1]{hoang2016}. Coulomb explosions are caused by excited electrons interacting with strong magnetic fields to create atomic motion. Explosive evaporation describes an event where the boiling point of the material is achieved and the large fluctuation in the material's density causes the explosive nucleation of bubbles. Various shapes of the ``starchip''\footnote{A name given to the spacecraft by the Breakthrough starshot team.} should be explored to reduce the surface area exposed to the incoming dust grains and gas particles.
+
+\begin{wrapfigure}{l}{0.4\textwidth}
+  \centering
+  \includegraphics[width=0.4\textwidth]{collision}
+  \caption{\footnotesize{Diagram of a relativistic particle collision \cite[p.~8]{hoang2016}.}}
+  \label{fig:collision}
+\end{wrapfigure}
+
+An impact with an interstellar atom at relativistic speeds can be broken down into stages as shown in figure \ref{fig:collision}, beginning with the electronic excitation and ionization of the spacecraft surface. Next the atoms with dense electronic excitations, those with many available states for occupation, relax into lower electron levels and transfer energy to nearby atoms. This effect, called lattice relaxation, creates hot secondary electrons that transfer their energy to the atoms in a cylindrical path, increasing the temperature. If this temperature exceeds the melting point of the material, deformation of the spacecraft surface is possible. Finally, the atoms cool down and radiate their energy into space, eventually reaching equilibrium. This entire process happens within 10\textsuperscript{-13} to 10\textsuperscript{-10} seconds at a microscopic scale. For permanent damage to happen, the lattice structure of a solid must be disrupted during the heating stage or the relaxation stage \cite[p.~2]{hoang2016}. Due to the low abundance of gas-phase iron, sputtering causes very little of the damage to the spacecraft \cite[p.~3]{hoang2016}. In the next two sections, the effects of both dust and gas collisions will be analyzed.
+
+\subsection{Interstellar gas}
+Dust grains pose a threat because of their potential ability to disable the spacecraft, but lighter gas atoms will erode the surface away over time. The most abundant atoms in the ISM are hydrogen and helium, which are far lighter than dust grains. There are also some heavier gas atoms which are capable of penetrating the spacecraft's surface to a depth of \SI{1}{\milli\meter}. The track radius for heavier gas atoms was calculated to be 2.2nm for quartz \cite[p.~4]{hoang2016}. From the research of Dr.~Hoang et al., the track radius of graphite was found to be smaller than quartz because graphite is better at conducting heat away from the point of collision. As velocity increases, the track radius of quartz decreases due to the particles having less time to interact with the spacecraft material. At 20\% the speed of light with a quartz surface, 70\% of the spacecraft is damaged after traversing through a \SI{2e18}{\per\square\centi\meter} gas column. If there is a graphite surface, the spacecraft damage will be negligible if it is travelling above 10\% the speed of light, due to the reduced track radius. After sweeping through a \SI{1e18}{\per\square\centi\meter} gas column, a quartz surface with a thickness of \SI{0.1}{\milli\meter} can be substantially damaged. In contrast a graphite surface would be damaged to a thickness of \SI{0.01}{\milli\meter} before reaching Alpha Centauri \cite[p.~5]{hoang2016}. A potential solution would be to minimize the surface area of the spacecraft to allow for the least gas collisions and therefore least erosion of its surface.
+
+\subsection{Interstellar dust}
+The amount of damage caused by dust grains is mostly determined by their size and mass. From models by Weingartner and Draine, it is found that much of the grain mass in the ISM is from particles smaller than \SI{0.25}{\micro\meter}. There are very few particles larger than \SI{0.3}{\micro\meter}. The gas to dust mass ratio within the interstellar medium is about 100, yet interstellar dust collisions pose a larger threat \cite[p.~6-7]{hoang2016}. With large enough dust, the melting point of the spacecraft surface can be reached which could cause deformation of the material. If the dust is of greater size, sublimation can occur and reduce the spacecraft mass. In addition to losing mass, the gas expelled from the collision point could produce a small amount of thrust and push the spacecraft off course. Highly conductive materials like graphite could be able to suppress the effect of sublimation. The heat from the impact would be radiated before the material reaches the sublimation point \cite[p.~8-9]{hoang2016}. After traversing through a gas column of \SI{3e17}{\per\square\centi\meter}, 20\% of both graphite and quartz surfaces would be eroded. In addition, melting a graphite surface would take \SI{3e17}{\per\square\centi\meter}, but only \SI{1e17}{\per\square\centi\meter} for quartz. Travelling at 20\% the speed of light to Alpha Centauri will result in 30\% of the volume of the spacecraft being eroded away by gas and dust in the ISM. With a quartz surface, the spacecraft might be melted to a depth of \SI{1}{\centi\meter}, but less with graphite. Although rare, larger dust grains can be found in the ISM which pose a serious threat to the mission. In some cases, these large grains could obliterate the entire spacecraft in one collision. To destroy it entirely, dust grains ranging in sizes from \SI{4}{\micro\meter} to \SI{15}{\micro\meter} could be required \cite[p.~9]{hoang2016}. The destructive capabilities of these dust grains demonstrates one of the largest obstacles to a successful relativistic spacecraft mission to the Alpha Centauri system.
+
+\subsection{Cosmic rays}
+Another environmental obstacle which threatens spacecrafts on their journey to Proxima b is cosmic rays. They have the ability to interfere with or damage electronics within the spacecrafts. Solar cosmic rays coming from stars such as our own are only dangerous during periods of high solar activity due to their weak penetration depth. Galactic cosmic rays are far more damaging because they can easily penetrate semiconductors with their high energy. These cosmic rays are about 85\% protons, 14\% alpha particles, and 1\% heavy nuclei \cite[p.~21]{mikaelian2009}. Ionization or atomic displacement can both be caused by energy depositions of the cosmic rays, potentially cause permanent damage to the electronics. Every semiconductor has a total ionization dose, before its degradation starts to cause functional failures. \SI{10}{\gray} could disable sensitive semiconductor applications, but those with radiation hardening could potentially withstand up to \SI{100000}{\gray}. Another way cosmic rays can affect electronics is through atomic displacement. In these cases atoms are moved to an interstitial\footnote{The term interstitial defines a position outside of an atom's regular lattice structure.} position, resulting in defective clusters of atoms which may hinder device performance \cite[p.~23]{mikaelian2009}.
+
+Single event effects, the most common consequence of cosmic ray interference, could put processors into unrecoverable states. There are three main single event effects: single event upsets (SEU), single event latchups (SEL), and single event burnouts (SEB). SEUs are when a particle inflicts an undesirable change in logic state within the device. SELs are when particles change switch a logic state which can't be recovered without a power reset. SEBs are when particles burn out a certain part of the IC\footnote{Integrated circuit} with high current. SEBs are permanent and usually affect the device performance significantly \cite[p.~23]{mikaelian2009}. One solution to SEUs and SELs is to build a watchdog timer into the IC which will reset the processor after a certain period of inactivity. Although cosmic rays have the capability to disable the spacecrafts, using watchdog timers will allow most spacecraft to survive during their interstellar travel.
+
+\subsection{Other considerations}
+In addition to the effects of collisions, we must take into account certain unique phenomena that occur only in these types of extreme environments. First, collisions with interstellar and interplanetary particles create heat which cannot be radiated from the surface of the spacecraft instantly. Collisional heating is dominated by gas in the ISM such as hydrogen and helium. Radiative heating due to the ISRF\footnote{Interstellar radiation field} is negligible when compared to that caused by gas collisions \cite[p.~11]{hoang2016}.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \centering
+  \includegraphics[width=0.5\textwidth]{temp}
+  \caption{\footnotesize{Surface temperature of the spacecraft versus speed with varying ISM gas densities \cite[p.~11]{hoang2016}.}}
+  \label{fig:temp}
+\end{wrapfigure}
+
+If there are no denser clumps of the diffuse interstellar gas during the journey, the spacecraft shouldn't have a problem with surface heating. With the gas having an average density of \SI{0.1}{\per\cubic\centi\meter}, the surface of the spacecraft should never reach temperatures above about \SI{300}{\kelvin}, as shown in figure \ref{fig:temp} \cite[p.~11]{hoang2016}. If there are higher density regions of up to \SI{100}{\per\cubic\centi\meter} in the way of the spacecraft, its surface could heat up to \SI{800}{\kelvin} \cite[p.~14]{hoang2016}. Another effect which must be considered to prevent the spacecraft from travelling off course is the effect of the interstellar magnetic field on the spacecraft's trajectory. Through calculations the Larmor radius is found to be \SI{150}{\parsec} for a highly charged spacecraft. A Larmor radius is the radius of the circular motion of a charged particle in a magnetic field. With such a massive radius, this motion is negligible and does not need to be accounted for during the journey \cite[p.~14]{hoang2016}.
+
+\section{Engineering challenges}
+\subsection{Lightsail stability during propulsion}
+The spacecraft must maintain stability while being propelled by the ground-based laser array to ensure that it stays on its intended course towards the Alpha Centauri system. In most depictions of the Breakthrough Starshot proposal, the lightsail is a square with the payload in the center \cite{starshot}. A square lightsail has fundamental issues with stability because it would require an active stabilization system to prevent unintended torquing. It is said that a stable system error decays to zero as $t \rightarrow \infty$ and an unstable system error grows exponentially as $t \rightarrow \infty$ \cite[p.~2]{manchester2017}. Since planar lightsails would require active stabilization, alternative shapes and beam profiles can be explored to decrease the complexity and increase the reliability of the spacecraft.
+
+One solution is to have a conical sail riding on a Gaussian laser beam \cite[p.~3]{manchester2017}. According to a linear stability model created by Dr. Manchester, a cone will not have good stability because the center of mass must lie beneath the base of the cone by a large distance. Increasing the cone angle could help with stability, but with an angle past \SI{30}{\degree}, the restoring force decreases \cite[p.~5]{manchester2017}. If the cone is spinning, the sail will be marginally stable, but only when the beam is lined up with the sail's angular momentum vector. Since precision such as this is not realistic, a cone shape will not work for the sail \cite[p.~6]{manchester2017}.
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \centering
+  \includegraphics[width=0.5\textwidth]{beam}
+  \caption{\footnotesize{Potential function of the four Gaussian laser beams showing the basin in which the sphere would be stable \cite[p.~7]{manchester2017}.}}
+  \label{fig:beam}
+\end{wrapfigure}
+
+Another possible way to achieve passive stability is to have a spherical sail propelled by four Gaussian laser beams. From looking at the conical and planar lightsails, the coupling between rotation and translation is what creates their inherent stability issues \cite[p.~6]{manchester2017}. A sphere's symmetry eliminates the issue entirely. A laser beam shined anywhere but the center of a sphere will result in erroneous movement, and the precision required to maintain the beam on that spot is unrealistic. The solution therefore is to have 4 Gaussian beams surrounding the sphere to create a restoring force if the spacecraft draws too close to the edge as shown in figure \ref{fig:beam}. There will be some oscillations between the beams, but the amplitude will remain acceptable. With this system, there is a tradeoff between acceleration and stability because the distance from the spacecraft to the beams determines both the light flux and the restoring force \cite[p.~7]{manchester2017}. Using this novel approach, the spacecraft can maintain stability during propulsion.
+
+\subsection{Lightsail material and heating}
+For this mission to work, the lightsail must be both strong as well as light to maximize the acceleration from the laser propulsion. In addition, it must be as close as possible to being 100\% reflective to ensure that energy isn't absorbed by the sail. If it isn't perfect, energy from the laser will immediately vaporize the sail. To ensure that the spacecraft electronics maintain their functionality, in a research paper Dr.~Heller imposed a \SI{100}{\celsius} or \SI{373}{\kelvin} limit on the temperature of the sail during propulsion. This follows the recommendations from Intel to prevent damage to silicon ICs. One potential material for the lightsail could be a thin graphene film. Graphene has a melting point of around \SI{4510}{\kelvin}, very high compared to something like aluminum with a melting point of \SI{933}{\kelvin}. Using this formula we can find the minimum number of stellar radii away from a star the spacecraft must be to avoid heating above \SI{373}{\kelvin} \cite[p.~4-5]{heller2017}:
+
+\[ n = \sqrt{\zeta} \times (T_\textrm{eff}/T)^2  \]
+
+From this equation, it is found that a distance of 5.6 stellar radii is enough to prevent overheating of the lightsail. This means that stars like Sirius A could potentially be used to deccelerate or accelerate the spacecraft to change course or to enter orbit around a planet \cite[p.~5]{heller2017}. The most suitable type has been determined to be a graphene-class sail due to its mass and thermal capabilities. A graphene sail has a mass to surface ratio of \SI{8.6e-4}{\gram\per\meter\squared}. This type of sail, with a payload of \SI{1}{\gram} would require an area of \SI{100000}{\meter\squared}. The payload, sail, and sail coating would be around \SI{86}{\gram} in mass \cite[p.~2]{heller2017}. Another type of sail proposed is an aluminum lattice which has a mass to surface ratio of \SI{7e-2}{\gram\per\meter\squared}. With this type of sail the travel time is increased by a factor of $9.7$, demonstrating a clear advantage for the graphene sail \cite[p.~5]{heller2017}. Smaller and lighter sails with shorter travel times are possible with lighter payloads and higher-power lasers.
+
+\section{Conclusion}
+It is very evident that many challenges are in the way of successfully designing and launching gram-scale laser-propelled spacecraft to Alpha Centauri. With initial funding of only \SI{100}[\$]{million}, this project remains an ambitious goal which will require lots of research and resources \cite{starshot}. A more feasible way to test and use this type of technology could be to create a smaller scale version to explore our solar system faster. With this technology, probe travel times to Mars and other destinations could be reduced substantially. As these problems are solved, we will ever more be able to expand our reach into the universe and explore new worlds.
+
+\begin{thebibliography}{5}
+\bibitem{starshot} % used in the introduction as basic background information
+  \textit{Breakthrough Initiatives: Starshot}, \\
+  https://breakthroughinitiatives.org/Initiative/3
+\iffalse
+\bibitem{lubin2015} % not used
+  Philip Lubin,
+  \textit{A Roadmap to Interstellar Flight},
+  JBIS,
+  Apr 2015.
+\fi
+\bibitem{heller2017} % used for lightsail material and heating analysis
+  R\'{e}ne Heller \textit{et al.},
+  \textit{Optimized trajectories to the nearest stars using lightweight high-velocity photon sails},
+  Apr 2017.
+\bibitem{hoang2016} % used heavily to describe the interstellar particle collisions and heating
+  Thiem Hoang \textit{et al.},
+  \textit{The Interaction of Relativistic Spacecraft with the Interstellar Medium},
+  2nd version,
+  Dec 2016.
+\bibitem{mikaelian2009} % used to discuss effects of cosmic rays on spacecraft electronics
+  Tsoline Mikaelian,
+  \textit{Spacecraft Charging and Hazards to Electronics in Space},
+  Jun 2009.
+\bibitem{manchester2017} % used to discuss stability of various lightsail geometries
+  Zachary Manchester and Abraham Loeb,
+  \textit{Stability of a Light Sail Riding on a Laser Beam},
+  The Astrophysical Journal Letters,
+  3rd version,
+  Feb 2017.
+\end{thebibliography}
+
+\end{document}
